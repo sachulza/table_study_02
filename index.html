@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- //meta -->
+
+    <!-- css -->
+    <!-- plug-in css -->
+    <link rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- //plug-in css -->
+
+    <!-- ui css -->
+    <link rel="stylesheet" href="./assets/scss/style.css" />
+    <!-- //ui css -->
+    <!-- //css -->
+
+    <title>UI table study</title>
+  </head>
+  <body>
+    <!-- 
+    class naming : 
+        - 공통적으로 쓰는 큰 틀 레이아웃 (layout)
+        - 공통으로 여러곳에 사용 시 (ui)
+        - 특정 페이지만 사용 시 (page)
+        - 특이 케이스 (main, sub)
+    -->
+
+    <div class="page-main-wrap">
+      <div class="masthead-wrap">
+        <div class="layout-inner">
+          <span class="nuri-txt"
+            >이 누리집은 대한민국 공식 전자정부 누리집입니다.</span
+          >
+        </div>
+      </div>
+
+      <!-- header -->
+      <header class="layout-header-wrap">
+        <div class="layout-inner flex1">
+          <div class="logo-container">
+            <a href="#" class="icons-logo bgi"></a>
+            <nav class="nav-container">
+              <button href="#" class="nav-search">통합검색</button>
+              <button href="#" class="nav-menu">전체메뉴</button>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+      <section class="page-main-wrap">
+        <div class="layout-inner">
+          <div class="main-title-wrap">
+            <h3 class="main-title">검진항목</h3>
+          </div>
+          <div class="main-contents-wrap">
+            <h4 class="sub-title">일반건강검진</h4>
+            <div class="content-wrap">
+              <h5 class="content-title">건강검진 대상자</h5>
+              <table>
+                <caption>
+                  <span class="blind"
+                    >건강검진 대상자 - 대상자 구분, 대상기준, 실시주기를
+                    설명하는 테이블 입니다.</span
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 16.65%" />
+                  <col style="width: 16.65%" />
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">대상기준</th>
+                    <th scope="col">실시주기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">건강보험 가입자</td>
+                    <td>지역가입자</td>
+                    <td>세대주 및 만 20세 이상 세대원</td>
+                    <td>2년 / 1회</td>
+                  </tr>
+                  <tr>
+                    <td>피부양자</td>
+                    <td>만 20세 이상 피부양자</td>
+                    <td>2년 / 1회</td>
+                  </tr>
+                  <tr>
+                    <td>직장가입자</td>
+                    <td>
+                      비사무직 근로자 <br />
+                      사무직 근로자
+                    </td>
+                    <td>
+                      비사무직 1년 / 1회 <br />
+                      사무직 2년 / 1회
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">의료급여 수급권자</td>
+                    <td>만 19세 ~ 만 64세 의료급여수급권자</td>
+                    <td>2년 / 1회</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content-wrap">
+              <h5 class="content-title">공통검사항목</h5>
+              <table>
+                <caption>
+                  <span class="blind"
+                    >건강검진 대상자 - 대상자 구분, 대상기준, 실시주기를
+                    설명하는 테이블 입니다.</span
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                  <col style="width: 25%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">대상질환</th>
+                    <th scope="col" style="border-right: 1px double">
+                      검사항목
+                    </th>
+                    <th scope="col">대상질환</th>
+                    <th scope="col">검사항목</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>비만</td>
+                    <td style="border-right: 1px double">
+                      신장, 체중, 허리둘레, 체질량지수
+                    </td>
+                    <td>당뇨병</td>
+                    <td>공복혈당</td>
+                  </tr>
+                  <tr>
+                    <td>시각, 청각이상</td>
+                    <td style="border-right: 1px double">시력, 청력</td>
+                    <td>간장질환</td>
+                    <td>AST, ALT, r-GTP</td>
+                  </tr>
+                  <tr>
+                    <td>고혈압</td>
+                    <td style="border-right: 1px double">혈압</td>
+                    <td>폐결핵/흉부질환</td>
+                    <td>흉부방사선촬영</td>
+                  </tr>
+                  <tr>
+                    <td>신장질환</td>
+                    <td style="border-right: 1px double">
+                      요단백, 혈청크레아티닌, e-GFR
+                    </td>
+                    <td>구강질환</td>
+                    <td>구강검진</td>
+                  </tr>
+                  <tr>
+                    <td>빈혈증</td>
+                    <td style="border-right: 1px double">혈색소</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content-wrap">
+              <h5 class="content-title">성·연령별 검사항목</h5>
+              <table>
+                <caption>
+                  <span class="blind"
+                    >건강검진 대상자 - 대상자 구분, 대상기준, 실시주기를
+                    설명하는 테이블 입니다.</span
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 16.65%" />
+                  <col style="width: 16.65%" />
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">검사항목</th>
+                    <th scope="col">대상연령</th>
+                    <th scope="col">비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>이상 지질혈증</td>
+                    <td>
+                      <ul>
+                        <li>총콜레스테롤</li>
+                        <li>HDL/LDL 콜레스테롤</li>
+                        <li>중성지방(트리글리세라이드)</li>
+                      </ul>
+                    </td>
+                    <td>
+                      남자 : 만 24세 이상
+                      <br />
+                      여자 : 만 40세 이상(4년 주기)
+                    </td>
+                    <td>
+                      남자 : 만 24세, 28세, 32세...
+                      <br />
+                      여자 : 만 40세, 44세, 48세... 해당
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">B형 간염항원, 항체</td>
+                    <td>만 40세</td>
+                    <td>면역자, 보균자는 제외</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">골밀도 검사</td>
+                    <td>만 54세, 66세 여성</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">인지기능장애</td>
+                    <td>만 66세 이상(2년 주기)</td>
+                    <td>만 66세, 68세, 70세...</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">정신건강(우울증)검사</td>
+                    <td>만 20세, 30세, 40세, 50세, 60세, 70세</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">생활습관평가</td>
+                    <td>만 40세, 50세, 60세, 70세</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">노인신체기능 검사</td>
+                    <td>만 66세, 70세, 80세</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">치면세균막 검사</td>
+                    <td>만 40세</td>
+                    <td>구강검진 항목</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content-wrap">
+              <h5 class="content-title">건강검진 대상자</h5>
+              <table>
+                <caption>
+                  <span class="blind"
+                    >건강검진 대상자 - 대상자 구분, 대상기준, 실시주기를
+                    설명하는 테이블 입니다.</span
+                  >
+                </caption>
+                <colgroup>
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">검사항목</th>
+                    <th scope="col">대상</th>
+                    <th scope="col">비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>위암</td>
+                    <td>만 40세 이상 남·여</td>
+                    <td>2년 마다</td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        background-color: #f5f5f5;
+                        border: 2px solid #0a5f3b;
+                      "
+                    >
+                      대장암
+                    </td>
+                    <td>만 50세 이상 남·여</td>
+                    <td>1년 마다</td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        background-color: #f5f5f5;
+                        border: 2px solid #0a5f3b;
+                        border-top: none;
+                      "
+                    >
+                      간암
+                    </td>
+                    <td>만 40세 이상 남·여 고위험군</td>
+                    <td>1년 2회(상반기, 하반기 각 1회)</td>
+                  </tr>
+                  <tr>
+                    <td>유방암</td>
+                    <td>만 40세 이상 여성</td>
+                    <td>2년 마다</td>
+                  </tr>
+                  <tr>
+                    <td>자궁경부암</td>
+                    <td>만 20세 이상 여성</td>
+                    <td>2년 마다</td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        background-color: #f5f5f5;
+                        border: 2px solid #0a5f3b;
+                      "
+                    >
+                      폐암
+                    </td>
+                    <td>만 54세 ~ 74세 남·여 고위험군</td>
+                    <td>2년 마다</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="cancer-note">음영처리한 부분은 현재 준비중입니다.</p>
+              <p class="cancer-note">
+                폐암검진은 외부 지정병원에서 받으실 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer>
+        <!-- related site -->
+        <section class="layout-related-site">
+          <div class="total-wrap">
+            <div class="footer-layout-inner">
+              <button class="site-container">질병관리청 소속기관</button>
+              <button class="site-container">사업별 누리집</button>
+              <button class="site-container">관련국외기관</button>
+            </div>
+          </div>
+        </section>
+        <!-- //related site -->
+
+        <!-- footer content -->
+        <section class="layout-footer-content">
+          <div class="total-wrap">
+            <div class="content-inner">
+              <figure class="icons-logo bgi"></figure>
+              <div class="content-wrap">
+                <div class="address-wrap">
+                  <p class="address-container">
+                    (28159) 충북 청주시 흥덕구 오송읍 오송생명2로 187
+                    오송보건의료행정타운내
+                  </p>
+                  <ul class="tel-wrap">
+                    <li class="tel-container">
+                      <p class="tel-subject">대표전화</p>
+                      <div class="tel-desc bold">
+                        <p>1339</p>
+                        <!-- <div class="divider"></div> -->
+                        <p>(무료)</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="link-wrap">
+                  <div class="location-wrap">
+                    <button class="ui-btn-arrow-r">찾아오시는 길</button>
+                    <button class="ui-btn-arrow-r">이용안내</button>
+                  </div>
+                  <div class="sns-wrap">
+                    <a href="" class="sns-container">
+                      <span class="sr-only">인스타그램</span>
+                      <i class="icons-instagram"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">유튜브</span>
+                      <i class="icons-youtube"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">트위터</span>
+                      <i class="icons-twitter"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">페이스북</span>
+                      <i class="icons-facebook"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">블로그</span>
+                      <i class="icons-blog"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="layout-footer-copyright">
+                <div class="link-copy">
+                  <a href="" class="bold">개인정보처리방침</a>
+                  <a href="">저작권정책</a>
+                  <a href="">웹 접근성 품질인증 마크 획득</a>
+                </div>
+                <p class="copyright-all">
+                  COPYRIGHT KDCA. ALL RIGHTS RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //footer content -->
+      </footer>
+      <!-- //footer -->
+    </div>
+
+    <!-- js -->
+    <!-- plug-in js -->
+
+    <!-- //plug-in js -->
+    <!-- //js -->
+  </body>
+</html>

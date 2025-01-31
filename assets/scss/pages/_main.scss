@@ -1,0 +1,135 @@
+.page-main-wrap {
+  @include flexColumn;
+  flex: 1;
+  margin-bottom: 50px;
+
+  // common
+  .main-gap {
+    @include flexColumn;
+    gap: 40px;
+    padding: 40px 0;
+
+    @include tablet {
+      gap: 64px;
+      padding: 64px 0;
+    }
+
+    & > section {
+      @include flexColumn {
+        gap: 24px;
+      }
+    }
+  }
+
+  .main-title-wrap {
+    padding: 12px 0;
+    border-bottom: 1px solid #b3c2a3;
+
+    .main-title {
+      @include font(h3, 40px);
+      letter-spacing: -0.08em;
+      color: #333;
+    }
+  }
+
+  .main-contents-wrap {
+    @include flexColumn {
+    }
+    gap: 24px;
+
+    .sub-title {
+      @include font(titleS, 28px);
+      margin-top: 32px;
+    }
+
+    .content-wrap {
+      @include flexColumn {
+      }
+      gap: 8px;
+
+      .content-title {
+        @include flexYCenter;
+        @include font(subtitleL, 26px);
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: relative;
+          top: 1px;
+          width: 16px;
+          height: 16px;
+          margin-right: 8px;
+          border: 4px solid #96d5b0;
+          box-sizing: inherit;
+        }
+      }
+
+      table {
+        border-collapse: separate;
+        border-top: 1px solid #333;
+        border-left: 1px solid #ddd;
+      }
+
+      td,
+      th {
+        text-align: center;
+        padding: 10px 3px;
+        border-collapse: collapse;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        @include font(bodyXS, 21px);
+        font-weight: 500;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #bbb;
+        color: #222;
+      }
+
+      td {
+        @include font(bodyS, 22px);
+        color: #444;
+
+        ul {
+          text-align: left;
+
+          li {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+              position: absolute;
+              display: inline-block;
+              content: "";
+              width: 4px;
+              height: 4px;
+              left: 0;
+              top: 10px;
+              margin: 0 8px;
+              border-radius: 2px;
+              background-color: #ddd;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+
+      .cancer-note {
+        @include flexYCenter;
+        @include font(bodyS, 20px);
+        color: #e0430c;
+
+        &::before {
+          display: inline-block;
+          content: "\eca0";
+          font-family: "remixicon";
+          font-size: 17px;
+          line-height: 20px;
+          margin-right: 3px;
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+}
